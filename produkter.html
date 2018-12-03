@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Il Ristorante Rilassante</title>
+</head>
+
+
+<body>
+    <div class="header">
+        <div class="header_text">
+            <img src="italien_logo.jpg" alt=""><br>
+            <h1></h1>
+            <!--<h3>Il Ristorante Rilassante</h3>-->
+            <button class="menu-item" data-kategori="alle">Alle</button>
+
+            <button class="menu-item" data-kategori="ringe">Ringe</button>
+
+            <button class="menu-item" data-kategori="billeder">Billeder</button>
+
+        </div>
+    </div>
+
+    <section id="modal">
+        <button>X</button>
+        <div id="modal-content">
+            <h2 class="modal-navn"></h2> <br> <br>
+            <span class="data-langbeskrivelse"></span>
+            <img class="modal-billede" src="" alt=""> <br>
+
+
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="data-container"></section>
+    </main>
+    <template class="data-template">
+        <article class="retter">
+
+            <img src="" alt=""><br>
+            <h2></h2>
+            <span class="data-kortbeskrivelse"></span><br> <br>
+            <br>
+            <b><span class="data-pris"></span></b><br>
+
+        </article>
+    </template>
+
+    <footer>
+        <h4>Adresse: Dansvej 1, 1900 Frederiksberg - Telefon: 12 34 56 78 - Mail: ilristorante@ilristorante.com - Åbnigstid: 10-22 alle dage</h4>
+
+    </footer>
+
+    <!--<script>
+    let retter;
+    let dest = document.querySelector(".data-container");
+    document.addEventListener("DOMContentLoaded", hentJson);
+    madFilter = "alle";
+    document.querySelectorAll(".menu-item").forEach(knap => {
+        knap.addEventListener("click", filtrering)
+    });
+
+    function filtrering() {
+        dest.textContent = "";
+        madFilter = this.getAttribute("data-kategori");
+        visRetter();
+    }
+    async function hentJson() {
+        let myJson = await fetch("menu.json");
+        retter = await myJson.json();
+        visRetter();
+    }
+
+    function visRetter() {
+        let temp = document.querySelector(".data-template");
+        document.querySelector("h1").textContent = madFilter;
+        //løb personlisten igennem og lav en klon
+        retter.forEach(retter => {
+            if (retter.kategori == madFilter || madFilter == "alle") {
+                let klon = temp.cloneNode(true).content;
+                //indsæt data i klonen
+                klon.querySelector("img").src = "images/" + retter.billede + ".jpg";
+                klon.querySelector("img").addEventListener("click", () => {
+                    visModal(retter);
+                });
+                klon.querySelector("h2").textContent = retter.navn;
+                klon.querySelector(".data-kortbeskrivelse").textContent = retter.kortbeskrivelse;
+                klon.querySelector(".data-pris").textContent = "Pris: " + retter.pris;
+                //placer klon i DOM
+                dest.appendChild(klon);
+            }
+        })
+    }
+
+    function visModal(retter) {
+        modal.classList.add("vis");
+        modal.querySelector(".modal-navn").textContent = retter.navn;
+        modal.querySelector(".modal-billede").src = "images/" + retter.billede + ".jpg";
+        modal.querySelector(".modal-billede").alt = "Foto af " + retter.navn;
+        modal.querySelector(".data-langbeskrivelse").textContent = retter.langbeskrivelse;
+        modal.querySelector("button").addEventListener("click", skjulModal);
+    }
+
+    function skjulModal() {
+        modal.classList.remove("vis");
+        //window.scrollTo(0);
+    }
+</script>-->
+</body>
+
+</html>

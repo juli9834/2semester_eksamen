@@ -1,0 +1,148 @@
+        :root {}
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        /*Nav*/
+        .logo_container img {
+            max-width: 70px;
+            margin: 6px 0;
+            margin-left: 6px;
+        }
+
+        .velkommen {
+            font-family: Georgia, serif;
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+        }
+
+        /*INDHOLD*/
+        body {
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+        img {
+            max-width: 100%;
+            margin: 20px 5px;
+        }
+
+        .bokse {
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+        .boks {
+            grid-row: span 1;
+            margin: 6px;
+            line-height: 1.6;
+            color: ;
+            text-align: center;
+        }
+
+        .boks1 {
+            background: ;
+        }
+
+        .boks2 {
+            background: ;
+        }
+
+        .boks3 {
+            background: ;
+        }
+
+        .boks4 {
+            background: ;
+        }
+
+        .headset {
+            margin: 10px 0 0 0;
+            max-height: 40px;
+        }
+
+
+        .boksheader {
+            font-size: 0.9em;
+            margin: 10px auto;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .boksemne {
+            font-size: 1.7em;
+            font-family: Georgia, serif;
+        }
+
+        .boksA {
+            max-width: 470px;
+            margin: 0 auto;
+            padding: 5px 15px;
+        }
+
+        .divider {
+            border: none;
+            width: 60px;
+            height: 2px;
+            margin: 10px auto;
+            background: var(--lyseblaa);
+        }
+
+        .boksButton {
+            border: 2px solid;
+            background-color: transparent;
+            color: ;
+            border-radius: 2em;
+            height: 40px;
+            min-width: 125px;
+            padding: 0 30px;
+            font-size: 16px;
+        }
+
+        .kontaktlink {
+            margin: 30px 0px;
+        }
+
+        .boks3 button {
+            color: #FFF;
+        }
+
+        .button_container {
+            margin: 13px 0 17px 0;
+        }
+
+        .tlf {
+            font-family: Georgia, serif;
+            font-size: 2em;
+        }
+
+        footer img {
+            max-width: 40px;
+            margin: 20px 5px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            background-color: ;
+        }
+
+        .knap3 {
+            max-width: 70px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%
+        }
