@@ -8,20 +8,43 @@
 
         html {
             height: 100%;
+            background-color: #E5E4E2;
         }
 
         /*Nav*/
         .logo_container img {
-            max-width: 70px;
-            margin: 6px 0;
-            margin-left: 6px;
+            max-width: 150px;
+            margin: 10px;
+            float: left;
+        }
+
+        .navigation li {
+            display: inline-block;
+            border-width: 0 1px 0 0;
+            padding: 40px 10px 10px 10px;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        .logo_container {
+            background: linear-gradient(to bottom, #b87333 10%, #E5E4E2 100%);
         }
 
         .velkommen {
             font-family: Georgia, serif;
-            font-size: 1.5em;
-            color: white;
-            text-align: center;
+            font-size: 1em;
+        }
+
+        .velkommen img {
+            max-width: 200px;
+            margin: 10px;
+
         }
 
         /*INDHOLD*/
@@ -49,22 +72,6 @@
             text-align: center;
         }
 
-        .boks1 {
-            background: ;
-        }
-
-        .boks2 {
-            background: ;
-        }
-
-        .boks3 {
-            background: ;
-        }
-
-        .boks4 {
-            background: ;
-        }
-
         .headset {
             margin: 10px 0 0 0;
             max-height: 40px;
@@ -89,40 +96,8 @@
             padding: 5px 15px;
         }
 
-        .divider {
-            border: none;
-            width: 60px;
-            height: 2px;
-            margin: 10px auto;
-            background: var(--lyseblaa);
-        }
-
-        .boksButton {
-            border: 2px solid;
-            background-color: transparent;
-            color: ;
-            border-radius: 2em;
-            height: 40px;
-            min-width: 125px;
-            padding: 0 30px;
-            font-size: 16px;
-        }
-
-        .kontaktlink {
-            margin: 30px 0px;
-        }
-
-        .boks3 button {
-            color: #FFF;
-        }
-
         .button_container {
             margin: 13px 0 17px 0;
-        }
-
-        .tlf {
-            font-family: Georgia, serif;
-            font-size: 2em;
         }
 
         footer img {
@@ -133,11 +108,7 @@
         footer {
             display: flex;
             justify-content: center;
-            background-color: ;
-        }
-
-        .knap3 {
-            max-width: 70px;
+            background: linear-gradient(to top, #b87333 -20%, #E5E4E2 100%);
         }
 
         .center {
@@ -145,4 +116,23 @@
             margin-left: auto;
             margin-right: auto;
             width: 70%
+        }
+
+        .vejledning img {
+            max-width: 350px;
+            margin: 0px 20px 20px 20px;
+        }
+
+        .pdf {
+            padding: 10px;
+        }
+
+        a {
+            color: black;
+        }
+
+        .kontakt img {
+            max-width: 200px;
+            margin: 10px;
+            position:
         }
