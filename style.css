@@ -1,9 +1,7 @@
-        :root {}
-
         * {
             margin: 0;
             padding: 0;
-            font-family: 'Work Sans', sans-serif;
+            /*            font-family: 'Cookie', cursive;*/
         }
 
         html {
@@ -22,6 +20,7 @@
             display: inline-block;
             border-width: 0 1px 0 0;
             padding: 40px 10px 10px 10px;
+            font-family: 'Cookie', cursive;
         }
 
         li {
@@ -32,8 +31,9 @@
             text-decoration: none;
         }
 
-        .logo_container {
-            background: linear-gradient(to bottom, #b87333 10%, #E5E4E2 100%);
+        nav {
+            background: linear-gradient(to bottom, #b87333 10%, #E5E4E2 90%);
+            max-height: 90px;
         }
 
         .velkommen {
@@ -55,8 +55,17 @@
         }
 
         img {
-            max-width: 100%;
             margin: 20px 5px;
+        }
+
+        .ring_billede {
+            max-width: 180px;
+            margin: 0 10px;
+        }
+
+        .billede_billede {
+            max-width: 250px;
+            margin: 10px
         }
 
         .bokse {
@@ -68,7 +77,6 @@
             grid-row: span 1;
             margin: 6px;
             line-height: 1.6;
-            color: ;
             text-align: center;
         }
 
@@ -87,11 +95,11 @@
 
         .boksemne {
             font-size: 1.7em;
-            font-family: Georgia, serif;
+            font-family: 'Cookie', cursive;
         }
 
         .boksA {
-            max-width: 470px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 5px 15px;
         }
@@ -131,8 +139,70 @@
             color: black;
         }
 
+        .kontakt {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            position: relative;
+            top: -150px;
+        }
+
         .kontakt img {
             max-width: 200px;
             margin: 10px;
-            position:
+        }
+
+        .sporgsmal {
+            display: grid;
+            grid-template-rows: 1fr 1fr auto;
+            font-family: 'Cookie', cursive;
+        }
+
+        .sporgsmal {
+            grid-row: span 1;
+            margin: 6px;
+            line-height: 1.6;
+            text-align: left;
+            padding: 10px;
+            text-decoration: underline;
+        }
+
+        .svar {
+            grid-row: span 1;
+            margin: 6px;
+            line-height: 1.6;
+            text-align: right;
+            max-width: 90%;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+            font-family: 'Cookie', cursive;
+        }
+
+        .text {
+            grid-row: span 1;
+            margin: 10px;
+            line-height: 1.6;
+            text-align: right;
+            max-width: 90%;
+            padding: 10px;
+        }
+
+        .odr_link {
+
+            grid-row: span 1;
+            margin: 10px;
+            line-height: 1.6;
+            text-align: right;
+            max-width: 90%;
+            padding: 10px;
+        }
+
+        .minKonto {
+            position: relative;
+            top: -250px;
         }
