@@ -40,6 +40,8 @@
         .velkommen {
             font-family: Georgia, serif;
             font-size: 1em;
+            padding: 10px;
+            margin: 20px;
         }
 
         .velkommen img {
@@ -71,15 +73,14 @@
 
         .bokse {
             display: grid;
-            grid-template-rows: 1fr auto;
+            grid-template-rows: 1fr;
         }
+
 
         .boks {
-            grid-row: span 1;
             margin: 6px;
-
-            text-align: center;
         }
+
 
         .headset {
             margin: 10px 0 0 0;
@@ -87,20 +88,12 @@
         }
 
 
-        .boksheader {
-            font-size: 0.9em;
-            margin: 10px auto;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
         .boksemne {
             font-size: 1.7em;
             font-family: 'Cookie', cursive;
         }
 
         .boksA {
-            max-width: 600px;
             margin: 0 auto;
             padding: 5px 15px;
         }
@@ -118,13 +111,6 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(to top, #b87333 -20%, #E5E4E2 100%);
-        }
-
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 70%
         }
 
         .vejledning img {
@@ -153,16 +139,9 @@
         }
 
         .sporgsmal {
-            display: grid;
-            grid-template-rows: 1fr 1fr auto;
             font-family: 'Cookie', cursive;
-        }
-
-        .sporgsmal {
-            grid-row: span 1;
             margin: 6px;
             font-size: 1.5em;
-            text-align: left;
             padding: 10px;
             text-decoration: underline;
         }
@@ -170,7 +149,6 @@
         .svar {
             grid-row: span 1;
             margin: 6px;
-            line-height: 1.6;
             max-width: 90%;
             padding: 10px;
         }
@@ -186,7 +164,6 @@
         .text {
             grid-row: span 1;
             margin: 10px;
-            line-height: 1.6;
             max-width: 90%;
             padding: 10px;
         }
@@ -195,7 +172,6 @@
 
             grid-row: span 1;
             margin: 10px;
-            line-height: 1.6;
             max-width: 90%;
             padding: 10px;
         }
@@ -223,4 +199,12 @@
             grid-gap: 20px;
             grid-template-columns: repeat(3, 1fr);
             display: grid;
+        }
+
+        .viedo2 {
+            text-align: right;
+        }
+
+        .video1 {
+            text-align: center;
         }
