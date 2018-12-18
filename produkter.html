@@ -36,32 +36,40 @@
     <div class="maincontainer">
         <header>
             <div class="logo">
-                <h1>DET SKER I HUSET KBH</h1>
+                <h1>Her er de skønne produkter</h1>
             </div>
 
 
-            <div>
-                <button id="filterall">Alle</button>
-                <button id="filterringe">Ringe</button>
-                <button id="filterbilleder">Billeder</button>
-                <div class="subcat">
-                </div>
-
-            </div>
-        </header>
-        <article id="eventscontainer"></article>
+<!--
+<div>
+    <button id="filterall">Alle</button>
+    <button id="filterringe">Ringe</button>
+    <button id="filterbilleder">Billeder</button>
+    <div class="subcat">
     </div>
 
-    <template id="produkt-template">
-        <section class="event">
-            <h2 class="data-titel"></h2>
-            <a href="" class="linktosingle">
-                <img class="data-img" src="">
-            </a>
-            <p class="data-beskrivelse"></p>
-            <p class="data-pris"></p>
-        </section>
-    </template>
+</div>
+-->
+        </header>
+        <div id="container">
+
+
+        </div>
+
+        <template data-template>
+            <article id="produktcontainer">
+
+                <h2 class="data-titel"></h2>
+                <img class="data-img">
+                <p class="data-beskrivelse"></p>
+                <p class="data-pris"></p>
+
+            </article>
+        </template>
+
+    </div>
+
+
     <footer>
         <div class="socials">
             <a href="https://www.facebook.com/Flottenhejmer1/" target="_blank">
@@ -72,74 +80,40 @@
     </footer>
 
     <script>
-        let minTemplate = document.querySelector("#produkt-template");
-        let templateModtager = document.querySelector("#eventscontainer");
+        let produktObjekt;
+        let produkter;
+        let produkt;
+        let postTemplate = document.querySelector("[data-template]");
+        dest = document.querySelector("#container");
+
+
         async function getJson() {
-            let eventObjekt = await fetch("http://juliehbjerning.dk/kea/2.%20semestereksamen/Eksamen/wordpress/wp-json/acf/v2");
-            let events = await eventObjekt.json();
-            let mitValg;
-            //find events der indeholder de valgte kategorier
-            let musik = events.filter(function(e) {
-                return e.categories.includes(17);
-            });
-            let film = events.filter(function(e) {
-                return e.categories.includes(19)
-            });
+            produktObjekt = await fetch("http://juliehbjerning.dk/kea/2_eksamen/wordpress/wp-json/wp/v2/ring");
+            produkter = await produktObjekt.json();
+            console.log(produkter);
+            visRinge();
 
-            function valgte(vc, genre) {
-                mitValg = events.filter(function(e) {
-                    return e.categories.includes(vc);
-                });
-                console.log(mitValg, genre);
-                visValgte(mitValg, genre);
-            }
-            visValgte(events);
-            document.querySelector('#filtermusik').addEventListener("click", function(e) {
-                visValgte(musik, "musik");
-                //console.log("target",e.target.id);
-            });
-            document.querySelector('#filterfilm').addEventListener("click", function() {
-                visValgte(film, "film");
-            });
-            document.querySelector('#filterall').addEventListener("click", function() {
-                visValgte(events, "all");
-            });
-            document.querySelector('#jazz').addEventListener("click", function() {
-                valgte(21, "musik");
-            });
-            document.querySelector('#rock').addEventListener("click", function() {
-                valgte(20, "musik");
-            });
-            document.querySelector('#alt').addEventListener("click", function() {
-                valgte(24, "musik");
-            });
-            document.querySelector('#folk').addEventListener("click", function() {
-                valgte(23, "musik");
-            });
-            document.querySelector('#pop').addEventListener("click", function() {
-                valgte(22, "musik");
-            });
         }
 
-        function visValgte(evt, cat) {
-            templateModtager.innerHTML = "";
-            if (cat == "musik") {
-                document.querySelector(".subcat").style.display = "block";
-            } else {
-                document.querySelector(".subcat").style.display = "none";
-            }
-            // console.log(cat);
-            evt.forEach(function(event) {
-                let klon = minTemplate.cloneNode(true).content;
-                klon.querySelector("section").classList.add(event.acf.genre);
-                klon.querySelector(".data-titel").textContent = event.acf.titel;
-                klon.querySelector(".data-beskrivelse").textContent = event.acf.genre;
-                klon.querySelector(".data-img").setAttribute("src", event.acf.billede);
-                klon.querySelector(".data-pris").textContent = event.acf.billetpris + "kr";
-                klon.querySelector(".linktosingle").setAttribute("href", "singleevent.html?id=" + event.id);
-                templateModtager.appendChild(klon);
+        function visRinge() {
+            console.log("visRinge");
+
+            produkter.forEach(produkt => {
+                let klon = postTemplate.cloneNode(true).content;
+
+                klon.querySelector(".data-titel").textContent = produkt.acf.navn;
+                klon.querySelector(".data-img").setAttribute("src", produkt.acf.billede);
+                klon.querySelector(".data-pris").textContent = produkt.acf.pris;
+                dest.appendChild(klon);
+
+
+
             });
+
+
         }
+
+
         //læs script når DOM er hentet
         document.addEventListener("DOMContentLoaded", getJson);
     </script>
