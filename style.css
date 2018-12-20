@@ -23,6 +23,7 @@
             font-family: 'Cookie', cursive;
         }
 
+
         li {
             float: right;
         }
@@ -31,7 +32,7 @@
             text-decoration: none;
         }
 
-        nav {
+        .navigation {
             background: linear-gradient(to bottom, #b87333 10%, #E5E4E2 90%);
             max-height: 90px;
             font-size: 1.5em;
@@ -207,4 +208,5 @@
 
         .video1 {
             text-align: center;
+
         }
